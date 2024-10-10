@@ -15,7 +15,7 @@ import { blogsPage } from '~/data'
         </p>
       </div>
       <div class="px-6 justify-self-center">
-        <all-posts />
+<!--        <all-posts />-->
       </div>
     </div>
   </div>

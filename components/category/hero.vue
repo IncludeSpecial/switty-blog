@@ -16,7 +16,7 @@ import { categoryPage } from '~/data'
         </p>
       </div>
       <div class="px-6 justify-self-center">
-        <AllCategories />
+<!--        <AllCategories />-->
       </div>
     </div>
   </div>
