@@ -9,7 +9,7 @@ useHead({
   ],
 })
 
-defineOgImageComponent('О мне', {
+defineOgImageComponent('About', {
   headline: 'Не правильный путь',
   title: '404',
   description: 'Страница не найдена',
