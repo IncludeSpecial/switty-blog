@@ -61,9 +61,9 @@ defineOgImageComponent('About', {
             <NuxtImg
               src="/switty.jpg"
               width="125"
-              height="115"
+              height="125"
               quality="50"
-              class="rounded-md"
+              class="rounded-full border-2 border-white"
             />
           </div>
         </div>
@@ -79,7 +79,7 @@ defineOgImageComponent('About', {
           width="500"
           height="500"
           quality="50"
-          class="rounded-full border-2 border-white"
+          class="rounded-full border-4 border-white"
         />
       </div>
     </div>
