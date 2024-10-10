@@ -14,18 +14,26 @@ import {footerData} from '~/data'
       <NuxtLink
         to="https://github.com/IncludeSpecial"
         target="_blank"
-        class="p-2 bg-gray-300 text-gray-800 rounded-md dark:bg-sky-700 dark:text-[#F1F2F4]"
+        class="px-2 py-1 lg:px-3 lg:py-2 bg-gray-300 text-gray-800 rounded-md dark:bg-slate-700 dark:text-[#F1F2F4]"
         aria-label="Github"
       >
-        <Icon name="fa:github" size="1em"/>
+        <Icon name="fa:github" size="1em" />
+      </NuxtLink>
+      <NuxtLink
+        to="https://www.youtube.com/@IDS_Switty"
+        target="_blank"
+        class="px-2 py-1 lg:px-3 lg:py-2 bg-gray-300 text-gray-800 rounded-md dark:bg-slate-700 dark:text-[#F1F2F4]"
+        aria-label="YouTube"
+      >
+        <Icon name="fa:youtube-play" size="1em" />
       </NuxtLink>
       <NuxtLink
         to="https://vk.com/k8rnash"
         target="_blank"
-        class="p-2 bg-gray-300 text-gray-800 rounded-md dark:bg-sky-700 dark:text-[#F1F2F4]"
-        aria-label="Vk"
+        class="px-2 py-1 lg:px-3 lg:py-2 bg-gray-300 text-gray-800 rounded-md dark:bg-slate-700 dark:text-[#F1F2F4]"
+        aria-label="VK"
       >
-        <Icon name="fa:vk" size="1em"/>
+        <Icon name="fa:vk" size="1em" />
       </NuxtLink>
     </div>
   </div>
