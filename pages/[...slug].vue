@@ -4,15 +4,15 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Page not found',
+      content: 'Страница не найдена',
     },
   ],
 })
 
-defineOgImageComponent('About', {
-  headline: 'Wrong Path',
+defineOgImageComponent('О мне', {
+  headline: 'Не правильный путь',
   title: '404',
-  description: 'Page Not Found',
+  description: 'Страница не найдена',
 })
 </script>
 

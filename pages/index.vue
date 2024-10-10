@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import Glow from '~/components/logo/glow.vue';
 import { navbarData } from '~/data'
 
 useHead({
@@ -8,22 +7,21 @@ useHead({
     {
       name: 'description',
       content:
-        'Добро пожаловать в мой блог. Получайте советы по веб-разработке, Javascript, Typescript, NodeJs, Vue и Nuxt, связанные статьи, советы, обучающие ресурсы и многое другое.',
+        'Welcome To My Blog Site. Get Web Development, Javascript, Typescript, NodeJs, Vue, and Nuxt, Related Articles, Tips, Learning resources and more.',
     },
   ],
 })
 
 // Generate OG Image
-defineOgImageComponent('О сайте', {
+defineOgImageComponent('About', {
   headline: 'Приветствую 👋',
   title: navbarData.homeTitle,
-  description: 'Погрузитесь в веб-разработку вместе со мной и изучите Js, Ts, Vue, Nuxt.',
+  description: 'Dive into web development with me and learn Js, Ts, Vue, Nuxt, Docker, k8s',
   link: '/switty.jpg',
 })
 </script>
 
 <template>
-  <Glow/>
   <main class="container max-w-5xl mx-auto text-zinc-600">
     <MainHero />
     <MainRecent />

@@ -109,7 +109,7 @@ defineOgImage({
 
         <ArchiveCard
           v-if="paginatedData.length <= 0"
-          title="No Post Found"
+          title="Пост не найден"
           image="/not-found.jpg"
         />
       </div>

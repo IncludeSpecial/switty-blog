@@ -1,9 +1,8 @@
 <script setup lang="ts">
-
-import {aboutPage, footerData, navbarData} from '~/data'
+import { aboutPage, footerData, navbarData } from '~/data'
 
 useHead({
-  title: 'О сайте',
+  title: 'О мне',
   meta: [
     {
       name: 'description',
@@ -12,11 +11,11 @@ useHead({
   ],
 })
 
-defineOgImageComponent('О сайте', {
-  headline: 'Приветсвую 👋',
+defineOgImageComponent('About', {
+  headline: 'Приветствую 👋',
   title: navbarData.homeTitle,
   description: 'Погрузитесь в веб-разработку вместе со мной и изучите Js, Ts, Vue, Nuxt.',
-  link: 'switty.jpg',
+  link: '/switty.jpg',
 })
 </script>
 
@@ -26,7 +25,7 @@ defineOgImageComponent('О сайте', {
       <div class="col-span-5  max-w-md">
         <div class="flex justify-between">
           <div>
-            <h1 class="text-xl sm:text-4xl pb-2 font-bold ">
+            <h1 class="text-xl sm:text-4xl  pb-2 font-bold ">
               {{ aboutPage.title }}
             </h1>
 
@@ -37,15 +36,7 @@ defineOgImageComponent('О сайте', {
                 class="px-2 py-1 lg:px-3 lg:py-2 bg-gray-300 text-gray-800 rounded-md dark:bg-slate-700 dark:text-[#F1F2F4]"
                 aria-label="Github"
               >
-                <Icon name="fa:github" size="1em"/>
-              </NuxtLink>
-              <NuxtLink
-                to="https://vk.com/k8rnash"
-                target="_blank"
-                class="px-2 py-1 lg:px-3 lg:py-2 bg-gray-300 text-gray-800 rounded-md dark:bg-slate-700 dark:text-[#F1F2F4]"
-                aria-label="VK"
-              >
-                <Icon name="fa:vk" size="1em"/>
+                <Icon name="fa:github" size="1em" />
               </NuxtLink>
               <NuxtLink
                 to="https://www.youtube.com/@IDS_Switty"
@@ -53,14 +44,22 @@ defineOgImageComponent('О сайте', {
                 class="px-2 py-1 lg:px-3 lg:py-2 bg-gray-300 text-gray-800 rounded-md dark:bg-slate-700 dark:text-[#F1F2F4]"
                 aria-label="YouTube"
               >
-                <Icon name="fa:youtube" size="1em"/>
+                <Icon name="fa:youtube-play" size="1em" />
               </NuxtLink>
+              <NuxtLink
+                to="https://vk.com/k8rnash"
+                target="_blank"
+                class="px-2 py-1 lg:px-3 lg:py-2 bg-gray-300 text-gray-800 rounded-md dark:bg-slate-700 dark:text-[#F1F2F4]"
+                aria-label="VK"
+              >
+                <Icon name="fa:vk" size="1em" />
+              </NuxtLink>
+
             </div>
           </div>
           <div class="sm:hidden block col-span-3 pb-5 dark:text-[#F1F2F4]">
-
             <NuxtImg
-              src="switty.jpg"
+              src="/switty.jpg"
               width="125"
               height="115"
               quality="50"
@@ -76,14 +75,13 @@ defineOgImageComponent('О сайте', {
       </div>
       <div class="hidden sm:block col-span-3">
         <NuxtImg
-          src="switty.jpg"
-          width="500"
+          src="/switty.jpg"
+          width="450"
           height="500"
           quality="50"
-          class="rounded-full border-4 border-blue-300"
+          class="rounded-md"
         />
       </div>
     </div>
-
   </div>
 </template>
