@@ -32,7 +32,7 @@ export const aboutPage = {
 
 export const seoData = {
   description: 'Switty, инженер-программист, с опытом работы в области разработки программного обеспечения более 2 лет.',
-  ogTitle: 'Switty кодирует и помогает другим изучать Javascript, Typescript, Vue, Nuxt и решать проблемы.',
+  ogTitle: 'Увлечен кодингом и помогает другим изучать Javascript, Typescript, Vue, Nuxt и решать проблемы.',
   twitterDescription: 'Сайт моего блога, где я играю с Nuxt, Vue и т.д., а также демонстрирую свой блог, ресурсы и т.д.',
   image: 'https://res.cloudinary.com/dmecmyphj/image/upload/v1673548905/nuxt-blog/cover_ntgs6u.webp',
   mySite: 'https://IDSwitty.ru',

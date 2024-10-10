@@ -63,7 +63,7 @@ defineOgImageComponent('About', {
               width="125"
               height="125"
               quality="50"
-              class="rounded-full aspect-[1/1] border-2 border-blue-400 dark:border-white"
+              class="rounded-full object-cover aspect-[1/1] border-2 border-blue-400 dark:border-white"
             />
           </div>
         </div>
@@ -79,7 +79,7 @@ defineOgImageComponent('About', {
           width="500"
           height="500"
           quality="50"
-          class="rounded-full aspect-[1/1] border-4 border-blue-400 dark:border-white"
+          class="rounded-full object-cover aspect-[1/1] border-4 border-blue-400 dark:border-white"
         />
       </div>
     </div>
