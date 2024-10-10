@@ -7,7 +7,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Welcome To My Blog Site. Get Web Development, Javascript, Typescript, NodeJs, Vue, and Nuxt, Related Articles, Tips, Learning resources and more.',
+        'Добро пожаловать в мой блог. Получайте советы по веб-разработке, Javascript, Typescript, NodeJs, Vue и Nuxt, связанные статьи, советы, обучающие ресурсы и многое другое.',
     },
   ],
 })
