@@ -35,7 +35,7 @@ export const seoData = {
   ogTitle: 'Увлечен кодингом и помогает другим изучать Javascript, Typescript, Vue, Nuxt и решать проблемы.',
   twitterDescription: 'Сайт моего блога, где я играю с Nuxt, Vue и т.д., а также демонстрирую свой блог, ресурсы и т.д.',
   image: 'https://res.cloudinary.com/dmecmyphj/image/upload/v1673548905/nuxt-blog/cover_ntgs6u.webp',
-  mySite: 'https://IDSwitty.ru',
+  mySite: 'https://switty-blog.vercel.app/',
   twitterHandle: '@Switty',
   mailAddress: 'IncludeSpecial@gmail.com',
 }
