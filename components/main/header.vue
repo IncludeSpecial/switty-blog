@@ -19,18 +19,18 @@ function onClick(val: string) {
         </li>
       </ul>
       <ul class="flex items-center space-x-3 sm:space-x-6 text-sm sm:text-lg">
-        <li title="Главная">
-          <NuxtLink to="/" aria-label="Главная">
+        <li title="Home">
+          <NuxtLink to="/" aria-label="Home">
             Главная
           </NuxtLink>
         </li>
-        <li>
-          <NuxtLink to="/blogs">
+        <li title="Blogs">
+          <NuxtLink to="/blogs" aria-label="Blogs">
             Посты
           </NuxtLink>
         </li>
-        <li>
-          <NuxtLink to="/categories">
+        <li title="Categories">
+          <NuxtLink to="/categories" aria-label="Categories">
             Категории
           </NuxtLink>
         </li>
