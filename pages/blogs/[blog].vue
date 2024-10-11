@@ -110,8 +110,7 @@ defineOgImageComponent('Test', {
       </div>
     </div>
     <BlogToc />
-
-    <div class="flex flex-row  flex-wrap md:flex-nowrap mt-10 gap-2">
+    <div class="flex flex-row text-sky-50  flex-wrap md:flex-nowrap mt-10 gap-2">
       <SocialShare
         v-for="network in ['twitter', 'telegram', 'whatsapp', 'email']"
         :key="network"

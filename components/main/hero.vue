@@ -15,7 +15,7 @@ import { homePage } from '~/data'
         </p>
       </div>
       <div class="px-6 justify-self-center">
-        <my-logo />
+        <my-logo  />
       </div>
     </div>
   </div>

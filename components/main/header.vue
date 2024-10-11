@@ -19,6 +19,11 @@ function onClick(val: string) {
       </ul>
       <ul class="flex items-center space-x-3 sm:space-x-6 text-sm sm:text-lg">
         <li>
+          <NuxtLink to="/">
+            Главная
+          </NuxtLink>
+        </li>
+        <li>
           <NuxtLink to="/blogs">
             Посты
           </NuxtLink>

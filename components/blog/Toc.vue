@@ -16,6 +16,7 @@ const links = articles?.body?.toc?.links || []
         class="block text-xs mb-3 hover:underline"
       >
         {{ link.text }}
+
       </NuxtLink>
     </div>
   </div>
