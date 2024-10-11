@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { navbarData } from '../../data'
+import {navbarData} from '@/data'
 
 const colorMode = useColorMode()
+
 function onClick(val: string) {
   colorMode.preference = val
 }
@@ -18,8 +19,8 @@ function onClick(val: string) {
         </li>
       </ul>
       <ul class="flex items-center space-x-3 sm:space-x-6 text-sm sm:text-lg">
-        <li>
-          <NuxtLink to="/">
+        <li title="Главная">
+          <NuxtLink to="/" aria-label="Главная">
             Главная
           </NuxtLink>
         </li>
@@ -47,7 +48,7 @@ function onClick(val: string) {
               class="hover:scale-110 transition-all ease-out hover:cursor-pointer"
               @click="onClick('dark')"
             >
-              <Icon name="fa:moon-o" size="20" />
+              <Icon name="fa:moon-o" size="20"/>
             </button>
             <button
               v-if="colorMode.value === 'dark'"
@@ -56,11 +57,11 @@ function onClick(val: string) {
               class="hover:scale-110 transition-all ease-out hover:cursor-pointer"
               @click="onClick('light')"
             >
-              <Icon name="fa:sun-o" size="20" />
+              <Icon name="fa:sun-o" size="20"/>
             </button>
             <template #fallback>
               <!-- this will be rendered on server side -->
-              <Icon name="svg-spinners:180-ring" size="20" />
+              <Icon name="svg-spinners:180-ring" size="20"/>
             </template>
           </ClientOnly>
         </li>
@@ -70,7 +71,7 @@ function onClick(val: string) {
 </template>
 
 <style>
-.router-link-active .router-link-exact-active  {
+.router-link-active .router-link-exact-active {
   @apply underline
 }
 </style>
