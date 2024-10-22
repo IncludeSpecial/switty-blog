@@ -1,4 +1,7 @@
 <script setup>
+import { inject } from '@vercel/analytics';
+
+inject();
 import { siteMetaData } from './data'
 
 useHead({
