@@ -28,7 +28,7 @@ defineOgImageComponent('About', {
 <template>
   <div class="py-5">
     <div class="container max-w-xl   mx-auto">
-      <h1>{{ error.statusCode }}</h1>
+      <h1 class="text-2xl text-red-400 font-bold">Произошла ошибка... {{ error.statusCode }}</h1>
       <NuxtLink to="/"><Logo404 />Go back home
 
       </NuxtLink>
