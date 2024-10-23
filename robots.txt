@@ -13,4 +13,5 @@ Disallow: /*?*
 # Запретить индексацию определенных файлов
 Disallow: /private/
 
-
+# Укажите ссылку на ваш файл карты сайта (если есть)
+Sitemap: https://switty.ru/sitemap.xml
