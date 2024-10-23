@@ -30,7 +30,9 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
   },
-
+  robots: {
+    mergeWithRobotsTxtPath: '/robots.txt'
+  },
   nitro: {
     prerender: {
       crawlLinks: true,

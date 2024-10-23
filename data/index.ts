@@ -1,5 +1,5 @@
 export const navbarData = {
-  homeTitle: 'Switty\'s Blog',
+  homeTitle: 'Switty\'s Blog | Блог',
 }
 
 export const footerData = {
@@ -11,7 +11,7 @@ export const footerData = {
 
 export const homePage = {
   title: 'Добро пожаловать на мой сайт',
-  description: 'Получите информацию по веб-разработке, Javascript, Typescript, NodeJs, Vue и Nuxt, соответствующие статьи, советы, обучающие ресурсы и многое другое.',
+  description: 'Получите информацию по веб-разработке, соответствующие статьи, советы, обучающие ресурсы и многое другое.',
 }
 
 export const blogsPage = {
