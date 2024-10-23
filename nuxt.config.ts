@@ -31,7 +31,7 @@ export default defineNuxtConfig({
     strict: true,
   },
   robots: {
-    mergeWithRobotsTxtPath: './robots.txt'
+    mergeWithRobotsTxtPath: './Robots.txt'
   },
   nitro: {
     prerender: {
