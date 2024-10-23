@@ -22,6 +22,11 @@ withDefaults(defineProps<Props>(), {
   tags: () => [],
   published: false,
 })
+
+function formatDate(date) {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' }
+  return new Date(date).toLocaleDateString('ru', options)
+}
 </script>
 
 <template>
@@ -45,11 +50,11 @@ withDefaults(defineProps<Props>(), {
         <div class="text-black dark:text-zinc-300   text-sm mt-2 mb-1 md:flex md:space-x-6">
           <div class="flex items-center">
             <LogoDate />
-            <p> {{ date }}</p>
+            <p> {{ formatDate(date) }}</p>
           </div>
           <div class="flex items-center gap-1 flex-wrap">
             <LogoTag />
-            <p v-for="tag in tags" :key="tag">
+            <p  v-for="tag in tags" :key="tag">
               {{ tag }}
             </p>
           </div>

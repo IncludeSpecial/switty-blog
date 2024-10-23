@@ -11,6 +11,7 @@ interface Props {
   published: boolean
 }
 
+
 withDefaults(defineProps<Props>(), {
   path: '/',
   title: 'no-title',
@@ -22,6 +23,11 @@ withDefaults(defineProps<Props>(), {
   tags: () => [],
   published: false,
 })
+
+function formatDate(date) {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' }
+  return new Date(date).toLocaleDateString('ru', options)
+}
 </script>
 
 <template>
@@ -37,7 +43,7 @@ withDefaults(defineProps<Props>(), {
         <div class="text-black dark:text-zinc-300    pt-3 pb-2">
           <div class="flex items-center">
             <LogoDate />
-            {{ date }}
+            {{ formatDate(date) }}
           </div>
           <div class="flex items-center gap-1 flex-wrap">
             <LogoTag />

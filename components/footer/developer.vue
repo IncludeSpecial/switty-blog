@@ -34,7 +34,16 @@ import {footerData} from '~/data'
         aria-label="VK"
       >
         <Icon name="fa:vk" size="1em" />
+      </NuxtLink>     <NuxtLink
+        to="https://discord.gg/Ykfhf46sxB"
+        target="_blank"
+        class="px-2 py-1 lg:px-3 lg:py-2 bg-gray-300 text-gray-800 rounded-md dark:bg-slate-700 dark:text-[#F1F2F4]"
+        aria-label="Discord"
+      >
+        <Icon name="cbi:discord" size="1em" />
       </NuxtLink>
+
+
     </div>
   </div>
 </template>

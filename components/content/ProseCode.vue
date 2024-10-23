@@ -24,7 +24,7 @@ defineProps({
 </script>
 
 <template>
-  <div>
+  <div class=".line">
     <slot />
   </div>
 </template>
