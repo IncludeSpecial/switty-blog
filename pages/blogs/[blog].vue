@@ -125,7 +125,7 @@ onMounted(loadUserStatus)
           </template>
         </ContentRenderer>
 
-        <CommentSection :postId="data.postId" :isAdmin="isAdmin" :userId="currentUserId" />
+<!--        <CommentSection :postId="data.postId" :isAdmin="isAdmin" :userId="currentUserId" />-->
 
       </div>
     </div>

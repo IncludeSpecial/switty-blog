@@ -17,7 +17,7 @@ interface Comment {
 export default defineEventHandler(async (event) => {
   const postId = event.context.params!.postId;
   const commentId = parseInt(event.context.params!.commentId);
-  const filePath = path.resolve(`./data/comments-${postId}.json`);
+  const filePath = path.resolve(`./data/comments/${postId}.json`);
   const body = await readBody(event);
 
   try {

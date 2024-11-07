@@ -1,21 +1,25 @@
-import { defineEventHandler } from 'h3';
-import { promises as fs } from 'fs';
+import { readFile, writeFile } from 'fs/promises';
+import { defineEventHandler, sendError, H3Error } from 'h3';
 import path from 'path';
 
 export default defineEventHandler(async (event) => {
-  const postId = event.context.params!.postId;
-  const commentId = parseInt(event.context.params!.commentId);
-  const isAdmin = event.context.user?.isAdmin;
+  const { postId, commentId } = event.context.params!;
   const filePath = path.resolve(`./data/comments-${postId}.json`);
+  const isAdmin = event.context.user?.isAdmin;  // Проверка, является ли пользователь администратором
 
-  if (!isAdmin) throw new Error('Только администратор может удалять комментарии.');
+  if (!isAdmin) {
+    return sendError(event, new H3Error('Только администратор может удалять комментарии.'));
+  }
 
   try {
-    const data = await fs.readFile(filePath, 'utf-8');
-    const comments = JSON.parse(data).filter((comment: { id: number }) => comment.id !== commentId);
-    await fs.writeFile(filePath, JSON.stringify(comments, null, 2));
-    return { success: true };
-  } catch {
-    throw new Error('Не удалось удалить комментарий.');
+    // Загружаем текущие комментарии
+    const data = await readFile(filePath, 'utf-8');
+    const comments = JSON.parse(data).filter((comment: { id: number }) => comment.id !== parseInt(commentId));
+
+    // Сохранение обновленных комментариев
+    await writeFile(filePath, JSON.stringify(comments, null, 2));
+    return { success: true, message: 'Комментарий удален.' };
+  } catch (error) {
+    return sendError(event, new H3Error('Не удалось удалить комментарий.'));
   }
 });

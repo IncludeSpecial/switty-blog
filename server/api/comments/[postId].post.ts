@@ -15,7 +15,7 @@ interface Comment {
 export default defineEventHandler(async (event) => {
   const postId = event.context.params!.postId;
   const body = await readBody(event);
-  const filePath = path.resolve(`./data/comments-${postId}.json`);
+  const filePath = path.resolve(`./data/comments/${postId}.json`);
 
   // Проверка данных комментария
   if (!body.name || !body.content) throw new Error('Имя и содержание комментария обязательны.');
