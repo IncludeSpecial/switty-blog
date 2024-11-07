@@ -1,32 +1,27 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import CommentSection from "~/components/blog/CommentSection.vue";
 
-// Статический ID администратора
+
 const adminId = 'admin-123'
-
-// Состояние текущего пользователя, по умолчанию будет 'guest'
 const currentUserId = ref<string>('guest')
-
-// Проверка, является ли текущий пользователь администратором
 const isAdmin = computed(() => currentUserId.value === adminId)
 
-// Загрузка состояния из localStorage при монтировании компонента
-const loadUserStatus = () => {
+function loadUserStatus() {
   const storedUserId = localStorage.getItem('userId')
-  currentUserId.value = storedUserId || 'guest' // Если не найдено, то ставим 'guest'
+  currentUserId.value = storedUserId || 'guest'
 }
 
-const enableAdminMode = () => {
-  localStorage.setItem('userId', adminId) // Устанавливаем ID администратора в localStorage
+function enableAdminMode() {
+  localStorage.setItem('userId', adminId)
   currentUserId.value = adminId
 }
 
-const disableAdminMode = () => {
-  localStorage.setItem('userId', 'guest') // Устанавливаем ID гостя в localStorage
+function disableAdminMode() {
+  localStorage.setItem('userId', 'guest')
   currentUserId.value = 'guest'
 }
 
-// Загружаем состояние пользователя при монтировании
 onMounted(loadUserStatus)
 </script>
 
@@ -34,14 +29,10 @@ onMounted(loadUserStatus)
   <div class="py-5">
     <div class="container max-w-5xl mx-auto px-6 sm:py-9">
       <h1 class="text-3xl font-bold pb-5">Режим администратора</h1>
-
-      <!-- Информация о текущем статусе пользователя -->
       <div class="pb-5">
         <p v-if="isAdmin" class="text-lg text-green-600">Вы вошли как администратор.</p>
         <p v-else class="text-lg text-red-600">Вы не являетесь администратором.</p>
       </div>
-
-      <!-- Кнопка для переключения на режим администратора -->
       <div class="space-x-4">
         <button
           v-if="!isAdmin"
@@ -58,6 +49,9 @@ onMounted(loadUserStatus)
           Выключить режим администратора
         </button>
       </div>
+
+      <!-- Передаем параметры isAdmin и currentUserId в CommentSection -->
+      <CommentSection :postId="'examplePostId'" :isAdmin="isAdmin" :userId="currentUserId" />
     </div>
   </div>
 </template>

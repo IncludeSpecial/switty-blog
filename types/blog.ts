@@ -1,4 +1,5 @@
 export interface BlogPost {
+  postId: string;
   title: string
   date: string
   description: string
