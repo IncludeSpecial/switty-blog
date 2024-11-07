@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { BlogPost } from '@/types/blog'
+import CommentSection from "~/components/blog/CommentSection.vue";
 import { navbarData, seoData } from '~/data'
 
 const { path } = useRoute()
@@ -107,9 +108,12 @@ defineOgImageComponent('Test', {
             <p>Контент не найден.</p>
           </template>
         </ContentRenderer>
+        <CommentSection :postId="path" is-admin :user-id="'Guest'" />
+
       </div>
     </div>
     <BlogToc />
+
     <div class="flex flex-row text-sky-50  flex-wrap md:flex-nowrap mt-10 gap-2">
       <SocialShare
         v-for="network in ['twitter', 'telegram', 'whatsapp', 'email']"

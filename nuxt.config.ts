@@ -1,73 +1,101 @@
-import { navbarData, seoData } from './data'
+import {navbarData, seoData} from './data'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
-export default defineNuxtConfig({
-  app: {
-    head: {
-      charset: 'utf-16',
-      viewport: 'width=device-width,initial-scale=1',
-      title: navbarData.homeTitle,
-      titleTemplate: `%s - ${navbarData.homeTitle}`,
+export default defineNuxtConfig(
+  {
+    app: {
+      head: {
+        charset: 'utf-16',
+        viewport: 'width=device-width,initial-scale=1',
+        title: navbarData.homeTitle,
+        titleTemplate: `%s - ${navbarData.homeTitle}`,
+      },
+      pageTransition: {
+        name: 'page',
+        mode: 'out-in'
+      },
+      layoutTransition: {
+        name: 'layout',
+        mode: 'out-in'
+      },
     },
-    pageTransition: { name: 'page', mode: 'out-in' },
-    layoutTransition: { name: 'layout', mode: 'out-in' },
-  },
-  experimental: {
-    componentIslands: true
-  },
-  sitemap: {
-    strictNuxtContentPaths: true,
-  },
-
-  site: {
-    url: seoData.mySite,
-    identity: {
-      type: 'Person',
+    runtimeConfig: {
+      redis: { // Default values
+        host: '',
+        port: 0,
+        /* other redis connector options */
+      }
     },
-    twitter: seoData.twitterHandle,
-  },
-
-  typescript: {
-    strict: true,
-  },
-  robots: {
-    mergeWithRobotsTxtPath: './Robots.txt'
-  },
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: [
-        '/',
-        '/rss.xml',
-      ],
+    experimental: {
+      componentIslands: true
     },
-  },
-
-  colorMode: {
-    classSuffix: '',
-    preference: 'dark',
-    fallback: 'light',
-  },
-
-  modules: [
-    'nuxt-icon',
-    '@nuxt/image',
-    '@vueuse/nuxt',
-    'nuxt-og-image',
-    '@nuxt/content',
-    '@nuxtjs/robots',
-    '@nuxtjs/sitemap',
-    '@nuxtjs/fontaine',
-    '@nuxtjs/color-mode',
-    '@nuxtjs/tailwindcss',
-    '@stefanobartoletti/nuxt-social-share',
-  ],
-
-  content: {
-    highlight: {
-      theme: 'dracula',
+    sitemap: {
+      strictNuxtContentPaths: true,
     },
-  },
 
-  compatibilityDate: '2024-09-30',
-})
+    site: {
+      url: seoData.mySite,
+      identity: {
+        type: 'Person',
+      },
+      twitter: seoData.twitterHandle,
+    },
+
+    typescript: {
+      strict: true,
+    },
+    robots: {
+      mergeWithRobotsTxtPath: './Robots.txt'
+    },
+    nitro: {
+      // Production
+      storage: {
+        db: {
+          driver: 'redis',
+          /* redis connector options */
+        }
+      },
+      // Development
+      devStorage: {
+        db: {
+          driver: 'fs',
+          base: './data/db'
+        }
+      }      ,
+      prerender: {
+        crawlLinks: true,
+        routes: [
+          '/',
+          '/rss.xml',
+        ],
+      },
+    },
+
+    colorMode: {
+      classSuffix: '',
+      preference: 'dark',
+      fallback: 'light',
+    },
+
+    modules: [
+      'nuxt-icon',
+      '@nuxt/image',
+      '@vueuse/nuxt',
+      'nuxt-og-image',
+      '@nuxt/content',
+      '@nuxtjs/robots',
+      '@nuxtjs/sitemap',
+      '@nuxtjs/fontaine',
+      '@nuxtjs/color-mode',
+      '@nuxtjs/tailwindcss',
+      '@stefanobartoletti/nuxt-social-share',
+    ],
+
+    content: {
+      highlight: {
+        theme: 'dracula',
+      },
+    },
+
+    compatibilityDate: '2024-09-30',
+  })
