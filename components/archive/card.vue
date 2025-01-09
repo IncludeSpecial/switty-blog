@@ -38,7 +38,7 @@ function formatDate(date) {
 </script>
 
 <template>
-  <article class="group border dark:border-gray-800  m-2 rounded-2xl overflow-hidden shadow-sm text-zinc-700 dark:text-zinc-300  ">
+  <article class="group border dark:border-neutral-800  m-2 rounded-2xl overflow-hidden shadow-sm text-zinc-700 dark:text-zinc-300  ">
     <NuxtLink :to="path" class="grid grid-cols-1 sm:grid-cols-10 gap-1">
       <div class="sm:col-span-3">
         <NuxtImg
@@ -49,7 +49,7 @@ function formatDate(date) {
         />
       </div>
       <div class="sm:col-span-7 p-5">
-        <h2 class="text-xl font-semibold text-black dark:text-zinc-300   pb-1 group-hover:text-sky-700 dark:group-hover:text-sky-400">
+        <h2 class="text-xl font-semibold text-black dark:text-zinc-300   pb-1 group-hover:text-neutral-700 dark:group-hover:text-neutral-400">
           {{ title }}
         </h2>
         <p class="text-ellipsis line-clamp-2">
@@ -67,7 +67,7 @@ function formatDate(date) {
             </p>
           </div>
         </div>
-        <div class="flex group-hover:underline text-sky-700 dark:text-sky-400 items-center pt-2">
+        <div class="flex group-hover:underline text-neutral-700 dark:text-neutral-400 items-center pt-2">
           <p>Читать подробнее</p>
           <LogoArrow />
         </div>

@@ -21,7 +21,7 @@ const formattedData = computed(() => {
 })
 
 useHead({
-  title: 'Главная',
+  title: 'Главные',
   meta: [
     {
       name: 'description',

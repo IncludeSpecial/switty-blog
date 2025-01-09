@@ -1,8 +1,9 @@
 <script lang="ts" setup>
+import Glow from "~/components/logo/glow.vue";
 import { navbarData } from '~/data'
 
 useHead({
-  title: 'Главная | Home',
+  title: 'Главные | Home',
   meta: [
     {
       name: 'description',
@@ -22,6 +23,7 @@ defineOgImageComponent('About', {
 </script>
 
 <template>
+  <glow />
   <main class="container max-w-5xl mx-auto text-zinc-600">
     <MainHero />
     <MainRecent />

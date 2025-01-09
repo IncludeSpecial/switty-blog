@@ -13,7 +13,7 @@ function toggleMenu() {
 </script>
 
 <template>
-  <div class="py-5 border-b dark:border-gray-800 font-semibold">
+  <div class="py-5 border-b dark:border-neutral-800 font-semibold">
     <div class="flex px-6 container max-w-5xl justify-between mx-auto items-baseline">
       <ul class="flex items-baseline space-x-5">
         <li class="text-base sm:text-2xl font-bold">
@@ -123,6 +123,6 @@ function toggleMenu() {
   transition: transform 0.3s ease;
 }
 .slide-right-enter, .slide-right-leave-to {
-  transform: translateX(100%);
+  transform: tranneutralX(100%);
 }
 </style>

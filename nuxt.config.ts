@@ -1,5 +1,9 @@
 import {navbarData, seoData} from './data'
 
+import AutoImport from 'unplugin-auto-import/vite'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+import Components from 'unplugin-vue-components/vite'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig(
   {
@@ -89,8 +93,27 @@ export default defineNuxtConfig(
       '@nuxtjs/color-mode',
       '@nuxtjs/tailwindcss',
       '@stefanobartoletti/nuxt-social-share',
+      'nuxtjs-naive-ui'
     ],
-
+    vite: {
+      plugins: [
+        AutoImport({
+          imports: [
+            {
+              'naive-ui': [
+                'useDialog',
+                'useMessage',
+                'useNotification',
+                'useLoadingBar'
+              ]
+            }
+          ]
+        }),
+        Components({
+          resolvers: [NaiveUiResolver()]
+        })
+      ]
+    },
     content: {
       highlight: {
         theme: 'dracula',
