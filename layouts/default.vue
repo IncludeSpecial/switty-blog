@@ -5,6 +5,7 @@
     </header>
     <main>
       <div class="p-9" />
+      <SpeedInsights/>
       <slot />
     </main>
     <footer>
@@ -20,3 +21,6 @@
   min-height: 100vh;
 }
 </style>
+<script setup>
+import { SpeedInsights } from "@vercel/speed-insights/nuxt"
+</script>
