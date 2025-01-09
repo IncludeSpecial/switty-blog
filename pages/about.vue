@@ -109,14 +109,14 @@ onMounted(() => {
         </div>
 
         <!-- Фото -->
-        <div class="lg:w-1/3 flex justify-center items-center">
+        <div class=" flex justify-center items-center">
           <div class="photo-container">
             <NuxtImg
               src="/switty.jpg"
               width="300"
               height="300"
               quality="80"
-              class="photo rounded-full mx-auto animate-pulseRotate"
+              class="object-cover border-4  rounded-full mx-auto animate-pulseRotate"
             />
           </div>
         </div>
@@ -127,15 +127,15 @@ onMounted(() => {
     <div class="py-10">
       <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 class="text-4xl font-bold mb-6 text-center animate-fade-in-up">Навыки</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
 
           <div
             v-for="skill in SkillsData"
             :key="skill.name"
-            class="p-4 border border-neutral-300 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 animate-fade-in-up"
+            class="p-4 border flex justify-between items-center gap-4 border-neutral-300 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 animate-fade-in-up"
           >
 
-            <Icon :name="skill.icon" size="2.5em" class="mx-auto mb-2"/>
+            <Icon :name="skill.icon" size="2.5rem" class=""/>
             <p class="text-center text-lg">{{ skill.name }}</p>
           </div>
         </div>

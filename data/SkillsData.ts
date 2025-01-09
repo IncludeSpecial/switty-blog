@@ -35,11 +35,11 @@ export const SkillsData = [
     name: "MarkDown",
     icon:
       "mdi:markdown"
-  }, {
+  },/*  {
     name: "Bootstrap",
     icon:
       "mdi:bootstrap"
-  }, {
+  },  */{
     name: "Python",
     icon:
       "mdi:language-python"

@@ -49,7 +49,7 @@ export default defineNuxtConfig(
       strict: true,
     },
     robots: {
-      mergeWithRobotsTxtPath: './Robots.txt'
+      mergeWithRobotsTxtPath: './robots.txt'
     },
     nitro: {
       // Production
