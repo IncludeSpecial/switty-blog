@@ -110,13 +110,13 @@ onMounted(() => {
 
         <!-- Фото -->
         <div class=" flex justify-center items-center">
-          <div class="photo-container">
+          <div class="">
             <NuxtImg
               src="/switty.jpg"
               width="300"
               height="300"
               quality="80"
-              class="object-cover border-4  rounded-full mx-auto animate-pulseRotate"
+              class="object-cover w-96 h-96 border-4  rounded-full mx-auto"
             />
           </div>
         </div>
