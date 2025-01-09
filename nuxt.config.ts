@@ -3,6 +3,7 @@ import {navbarData, seoData} from './data'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig(
+
   {
     app: {
       head: {
@@ -44,6 +45,10 @@ export default defineNuxtConfig(
 
     typescript: {
       strict: true,
+    },
+    socialShare: {
+      baseUrl: 'https://www.switty.ru' // required!
+      // other optional module options
     },
     robots: {
       mergeWithRobotsTxtPath: './robots.txt'

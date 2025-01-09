@@ -139,6 +139,7 @@ onMounted(loadUserStatus)
         :styled="true"
         :label="true"
         class="p-1"
+
         aria-label="Поделиться в {{network}}"
       />
     </div>
