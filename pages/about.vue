@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import Glow from "~/components/logo/glow.vue";
 import { aboutPage, navbarData, footerData } from '~/data';
 import { SkillsData } from "~/data/SkillsData";
 import { getRandomQuote } from "~/data/programmingQuotes";
