@@ -1,51 +1,51 @@
 export const SkillsData = [
   {
-  name: "HTML",
-  icon:
-    "mdi:language-html5"
-}, {
-  name: "CSS",
-  icon:
-    "mdi:language-css3"
-}, {
-  name: "JavaScript",
-  icon:
-    "mdi:language-javascript"
-}, {
-  name: "TypeScript",
-  icon:
-    "mdi:language-typescript"
-},
-  {
-    name: "Nuxt.js",
+    name: 'HTML',
     icon:
-      "mdi:nuxt"
+      'mdi:language-html5',
+  }, {
+    name: 'CSS',
+    icon:
+      'mdi:language-css3',
+  }, {
+    name: 'JavaScript',
+    icon:
+      'mdi:language-javascript',
+  }, {
+    name: 'TypeScript',
+    icon:
+      'mdi:language-typescript',
   },
   {
-    name: "Tailwind CSS",
+    name: 'Nuxt.js',
     icon:
-      "mdi:tailwind"
+      'mdi:nuxt',
   },
   {
-    name: "Node.js",
+    name: 'Tailwind CSS',
     icon:
-      "mdi:nodejs"
+      'mdi:tailwind',
   },
   {
-    name: "MarkDown",
+    name: 'Node.js',
     icon:
-      "mdi:markdown"
-  },/*  {
+      'mdi:nodejs',
+  },
+  {
+    name: 'MarkDown',
+    icon:
+      'mdi:markdown',
+  }, /*  {
     name: "Bootstrap",
     icon:
       "mdi:bootstrap"
   },  */{
-    name: "Python",
+    name: 'Python',
     icon:
-      "mdi:language-python"
+      'mdi:language-python',
   }, {
-    name: "C#",
+    name: 'C#',
     icon:
-      "mdi:language-csharp"
+      'mdi:language-csharp',
   },
 ]

@@ -1,5 +1,3 @@
-
-
 <template>
   <article class="group border dark:border-neutral-800 m-2 rounded-2xl overflow-hidden shadow-lg text-neutral-700">
     <NuxtLink to="/">

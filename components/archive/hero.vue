@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import AllPosts from '~/components/logo/allPosts.vue'
 import { blogsPage } from '~/data'
 </script>
 
@@ -15,7 +14,7 @@ import { blogsPage } from '~/data'
         </p>
       </div>
       <div class="px-6 justify-self-center">
-<!--        <all-posts />-->
+        <!--        <all-posts /> -->
       </div>
     </div>
   </div>

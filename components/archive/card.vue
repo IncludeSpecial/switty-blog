@@ -31,9 +31,9 @@ function formatDate(date) {
     hour: '2-digit',
     minute: '2-digit',
     second: '2-digit',
-    hour12: false
-  };
-  return new Date(date).toLocaleDateString('ru-RU', options);
+    hour12: false,
+  }
+  return new Date(date).toLocaleDateString('ru-RU', options)
 }
 </script>
 
@@ -62,7 +62,7 @@ function formatDate(date) {
           </div>
           <div class="flex items-center gap-1 flex-wrap">
             <LogoTag />
-            <p  v-for="tag in tags" :key="tag">
+            <p v-for="tag in tags" :key="tag">
               {{ tag }}
             </p>
           </div>

@@ -2,9 +2,6 @@
 const route = useRoute()
 
 const path = computed(() => route.fullPath.replace('/', ''))
-function handleClick(event: MouseEvent) {
-  console.log('Buttons clicked!', event);
-}
 </script>
 
 <template>
@@ -15,12 +12,10 @@ function handleClick(event: MouseEvent) {
         <FooterDeveloper v-else />
         <FooterLink />
         <FooterConnect />
-
       </div>
 
       <div class="border-t dark:border-neutral-800 mt-5 text-center p-2">
         © 2020-2024 Нет зарезервированных прав. Кого они волнуют‍?
-
       </div>
     </div>
   </div>

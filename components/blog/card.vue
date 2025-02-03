@@ -11,7 +11,6 @@ interface Props {
   published: boolean
 }
 
-
 withDefaults(defineProps<Props>(), {
   path: '/',
   title: 'no-title',
@@ -32,9 +31,9 @@ function formatDate(date) {
     hour: '2-digit',
     minute: '2-digit',
     second: '2-digit',
-    hour12: false
-  };
-  return new Date(date).toLocaleDateString('ru-RU', options);
+    hour12: false,
+  }
+  return new Date(date).toLocaleDateString('ru-RU', options)
 }
 </script>
 

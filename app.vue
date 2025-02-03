@@ -1,8 +1,9 @@
+// Исправленный `app.vue`
 <script setup>
-import { inject } from '@vercel/analytics';
-
-inject();
+import { inject } from '@vercel/analytics'
 import { siteMetaData } from './data'
+
+inject()
 
 useHead({
   htmlAttrs: {
@@ -13,11 +14,10 @@ useHead({
 </script>
 
 <template>
-  <div class="bg-gray-100/50 dark:text-zinc-300   dark:bg-neutral-950">
+  <div class="bg-neutral-100/50 dark:text-zinc-300 dark:bg-neutral-950">
     <NuxtLoadingIndicator />
     <NuxtLayout>
       <NuxtPage />
-
     </NuxtLayout>
   </div>
 </template>
@@ -30,20 +30,6 @@ useHead({
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
-  filter: blur(1rem);
-}
-
-.layout-enter-active,
-.layout-leave-active {
-  transition: all 0.4s;
-}
-.layout-enter-from,
-.layout-leave-to {
-  opacity: 0;
-  filter: blur(1rem);
-}
-
-html.dark{
-  color-scheme: dark;
+  transform: translateY(20px);
 }
 </style>

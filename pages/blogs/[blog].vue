@@ -1,30 +1,30 @@
-<!--pages/blogs/[blog]-->
+<!-- pages/blogs/[blog] -->
 <script setup lang="ts">
+import { computed, onMounted, ref } from 'vue'
 import type { BlogPost } from '@/types/blog'
-import { computed, ref, onMounted } from "vue";
-import { useRoute, useAsyncData, navigateTo } from '#imports'
-import CommentSection from "~/components/blog/CommentSection.vue";
-import BlogHeader from "~/components/blog/Header.vue";
-import BlogToc from "~/components/blog/Toc.vue";
+import { navigateTo, useAsyncData, useRoute } from '#imports'
+
+import BlogHeader from '~/components/blog/Header.vue'
+import BlogToc from '~/components/blog/Toc.vue'
 import { navbarData, seoData } from '~/data'
 
 const { path } = useRoute()
 
 const { data: articles, error } = await useAsyncData(`blog-post-${path}`, () => queryContent(path).findOne())
-if (error.value) navigateTo('/404')
+if (error.value)
+  navigateTo('/404')
 
 const data = computed<BlogPost>(() => {
-  return articles.value ? {
-    title: articles.value.title,
-    postId: articles.value.postId,
-    description: articles.value.description,
-    image: articles.value.image,
-    alt: articles.value.alt,
-    ogImage: articles.value.ogImage,
-    date: articles.value.date,
-    tags: articles.value.tags,
-    published: articles.value.published,
-  } : { /* ...значения по умолчанию... */ }
+  return {
+    title: articles.value?.title || 'no-title available',
+    description: articles.value?.description || 'no-description available',
+    image: articles.value?.image || '/not-found.jpg',
+    alt: articles.value?.alt || 'no alter data available',
+    ogImage: articles.value?.ogImage || '/not-found.jpg',
+    date: articles.value?.date || 'not-date-available',
+    tags: articles.value?.tags || [],
+    published: articles.value?.published || false,
+  }
 })
 
 useHead({
@@ -37,7 +37,7 @@ useHead({
     },
     // Test on: https://developers.facebook.com/tools/debug/ or https://socialsharepreview.com/
     { property: 'og:site_name', content: navbarData.homeTitle },
-    { hid: 'og:type', property: 'og:type', content: 'website' },
+    { property: 'og:type', content: 'website' },
     {
       property: 'og:url',
       content: `${seoData.mySite}/${path}`,
@@ -55,7 +55,7 @@ useHead({
       content: data.value.ogImage || data.value.image,
     },
     // Test on: https://cards-dev.twitter.com/validator or https://socialsharepreview.com/
-    { name: 'twitter:site', content: '@qdnvubp' },
+    { name: 'twitter:site', content: '@SwittyIDS' },
     { name: 'twitter:card', content: 'summary_large_image' },
     {
       name: 'twitter:url',
@@ -88,13 +88,11 @@ defineOgImageComponent('Test', {
   title: data.value.title || '',
   description: data.value.description || '',
   link: data.value.ogImage,
-  "postId": data.value.postId || ''
+  postId: data.value.postId || '',
 
 })
 
-const adminId = 'admin-123'
 const currentUserId = ref<string>('guest')
-const isAdmin = computed(() => currentUserId.value === adminId)
 
 function loadUserStatus() {
   const storedUserId = localStorage.getItem('userId')
@@ -124,9 +122,6 @@ onMounted(loadUserStatus)
             <p>Контент не найден.</p>
           </template>
         </ContentRenderer>
-
-<!--        <CommentSection :postId="data.postId" :isAdmin="isAdmin" :userId="currentUserId" />-->
-
       </div>
     </div>
     <BlogToc />

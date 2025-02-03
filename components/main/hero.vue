@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MyLogo from "~/components/logo/myLogo.vue";
+import MyLogo from '~/components/logo/myLogo.vue'
 import { homePage } from '~/data'
 </script>
 
@@ -15,7 +15,7 @@ import { homePage } from '~/data'
         </p>
       </div>
       <div class="px-6 justify-self-center">
-        <my-logo  />
+        <MyLogo />
       </div>
     </div>
   </div>

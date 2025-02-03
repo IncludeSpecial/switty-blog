@@ -1,13 +1,5 @@
-
-
-
+// Исправленный `error.vue`
 <script setup lang="ts">
-import type { NuxtError } from '#app'
-
-const props = defineProps({
-  error: Object as () => NuxtError
-})
-
 useHead({
   title: '404',
   meta: [
@@ -15,23 +7,20 @@ useHead({
       name: 'description',
       content: 'Страница не найдена',
     },
+    {
+      property: 'og:image',
+      content: '/default-og-image.png',
+    },
   ],
-})
-
-defineOgImageComponent('About', {
-  headline: 'Не правильный путь',
-  title: '404',
-  description: 'Страница не найдена',
 })
 </script>
 
 <template>
   <div class="py-5">
-    <div class="container max-w-xl   mx-auto">
-      <h1 class="text-2xl text-red-400 font-bold">Произошла ошибка... {{ error.statusCode }}</h1>
-      <NuxtLink to="/"><Logo404 />Go back home
-
-      </NuxtLink>
+    <div class="container max-w-xl mx-auto">
+      <h1 class="text-2xl text-center">
+        404 - Страница не найдена
+      </h1>
     </div>
   </div>
 </template>

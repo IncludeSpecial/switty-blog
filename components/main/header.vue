@@ -1,14 +1,15 @@
 <script setup lang="ts">
-import { navbarData } from '@/data';
-const colorMode = useColorMode();
-const isMenuOpen = ref(false);
+import { navbarData } from '@/data'
+
+const colorMode = useColorMode()
+const isMenuOpen = ref(false)
 
 function onClick(val: string) {
-  colorMode.preference = val;
+  colorMode.preference = val
 }
 
 function toggleMenu() {
-  isMenuOpen.value = !isMenuOpen.value;
+  isMenuOpen.value = !isMenuOpen.value
 }
 </script>
 
@@ -25,23 +26,31 @@ function toggleMenu() {
       <!-- Desktop Menu -->
       <ul class="hidden sm:flex items-center space-x-3 sm:space-x-6 text-sm sm:text-lg">
         <li title="Home">
-          <NuxtLink to="/" aria-label="Home">Главная</NuxtLink>
+          <NuxtLink to="/" aria-label="Home">
+            Главная
+          </NuxtLink>
         </li>
         <li title="Blogs">
-          <NuxtLink to="/blogs" aria-label="Blogs">Посты</NuxtLink>
+          <NuxtLink to="/blogs" aria-label="Blogs">
+            Посты
+          </NuxtLink>
         </li>
         <li title="Categories">
-          <NuxtLink to="/categories" aria-label="Categories">Категории</NuxtLink>
+          <NuxtLink to="/categories" aria-label="Categories">
+            Категории
+          </NuxtLink>
         </li>
         <li title="About Me">
-          <NuxtLink to="/about" aria-label="About me">Обо мне</NuxtLink>
+          <NuxtLink to="/about" aria-label="About me">
+            Обо мне
+          </NuxtLink>
         </li>
         <li>
           <ClientOnly>
-            <button v-if="colorMode.value === 'light'" @click="onClick('dark')" class="hover:scale-110 transition-all ease-out">
+            <button v-if="colorMode.value === 'light'" class="hover:scale-110 transition-all ease-out" @click="onClick('dark')">
               <Icon name="solar:moon-bold-duotone" size="20" />
             </button>
-            <button v-if="colorMode.value === 'dark'" @click="onClick('light')" class="hover:scale-110 transition-all ease-out">
+            <button v-if="colorMode.value === 'dark'" class="hover:scale-110 transition-all ease-out" @click="onClick('light')">
               <Icon name="solar:sun-bold-duotone" size="20" />
             </button>
           </ClientOnly>
@@ -55,7 +64,7 @@ function toggleMenu() {
 
     <!-- Overlay for Mobile Menu -->
     <transition name="fade">
-      <div v-if="isMenuOpen" class="fixed inset-0 bg-black bg-opacity-50 z-40" @click="toggleMenu"></div>
+      <div v-if="isMenuOpen" class="fixed inset-0 bg-black bg-opacity-50 z-40" @click="toggleMenu" />
     </transition>
 
     <!-- Mobile Menu -->
@@ -69,8 +78,9 @@ function toggleMenu() {
         </button>
         <!-- Menu Header -->
         <div class="mt-10 mb-6">
-
-          <p class="text-gray-500 dark:text-gray-400">Навигация по сайту</p>
+          <p class="text-gray-500 dark:text-gray-400">
+            Навигация по сайту
+          </p>
         </div>
         <!-- Menu Links -->
         <ul class="space-y-5 text-lg">
@@ -97,10 +107,10 @@ function toggleMenu() {
         </ul>
         <!-- Theme Toggle in Mobile Menu -->
         <div class="mt-auto pt-10">
-          <button v-if="colorMode.value === 'light'" @click="onClick('dark')" class="flex items-center space-x-2 hover:scale-110 transition-all ease-out">
+          <button v-if="colorMode.value === 'light'" class="flex items-center space-x-2 hover:scale-110 transition-all ease-out" @click="onClick('dark')">
             <Icon name="solar:moon-bold-duotone" size="20" /> <span>Темная тема</span>
           </button>
-          <button v-if="colorMode.value === 'dark'" @click="onClick('light')" class="flex items-center space-x-2 hover:scale-110 transition-all ease-out">
+          <button v-if="colorMode.value === 'dark'" class="flex items-center space-x-2 hover:scale-110 transition-all ease-out" @click="onClick('light')">
             <Icon name="solar:sun-bold-duotone" size="20" /> <span>Светлая тема</span>
           </button>
         </div>

@@ -1,5 +1,4 @@
-import {navbarData, seoData} from './data'
-
+import { navbarData, seoData } from './data'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig(
@@ -14,11 +13,11 @@ export default defineNuxtConfig(
       },
       pageTransition: {
         name: 'page',
-        mode: 'out-in'
+        mode: 'out-in',
       },
       layoutTransition: {
         name: 'layout',
-        mode: 'out-in'
+        mode: 'out-in',
       },
     },
     runtimeConfig: {
@@ -26,10 +25,10 @@ export default defineNuxtConfig(
         host: '',
         port: 0,
         /* other redis connector options */
-      }
+      },
     },
     experimental: {
-      componentIslands: true
+      componentIslands: true,
     },
     sitemap: {
       strictNuxtContentPaths: true,
@@ -47,11 +46,11 @@ export default defineNuxtConfig(
       strict: true,
     },
     socialShare: {
-      baseUrl: 'https://www.switty.ru' // required!
+      baseUrl: 'https://www.switty.ru', // required!
       // other optional module options
     },
     robots: {
-      mergeWithRobotsTxtPath: './robots.txt'
+      mergeWithRobotsTxtPath: './robots.txt',
     },
     nitro: {
       // Production
@@ -59,15 +58,15 @@ export default defineNuxtConfig(
         db: {
           driver: 'redis',
           /* redis connector options */
-        }
+        },
       },
       // Development
       devStorage: {
         db: {
           driver: 'fs',
-          base: './data/db'
-        }
-      }      ,
+          base: './data/db',
+        },
+      },
       prerender: {
         crawlLinks: true,
         routes: [

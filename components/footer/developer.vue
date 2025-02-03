@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {footerData} from '~/data'
+import { footerData } from '~/data'
 </script>
 
 <template>
@@ -42,8 +42,6 @@ import {footerData} from '~/data'
       >
         <Icon name="cbi:discord" size="1em" />
       </NuxtLink>
-
-
     </div>
   </div>
 </template>

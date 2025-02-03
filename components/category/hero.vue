@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import AllCategories from '~/components/logo/allCategories.vue'
-
 import { categoryPage } from '~/data'
 </script>
 
@@ -16,7 +14,7 @@ import { categoryPage } from '~/data'
         </p>
       </div>
       <div class="px-6 justify-self-center">
-<!--        <AllCategories />-->
+        <!--        <AllCategories /> -->
       </div>
     </div>
   </div>
