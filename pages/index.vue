@@ -2,7 +2,7 @@
 import { navbarData } from '~/data'
 
 useHead({
-  title: 'Главные | Home',
+  title: 'Главная | Home',
   meta: [
     {
       name: 'description',
