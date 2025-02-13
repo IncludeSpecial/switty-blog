@@ -23,7 +23,7 @@ withDefaults(defineProps<Props>(), {
   published: false,
 })
 
-function formatDate(date) {
+function formatDate({ date }: { date: any }) {
   const options = {
     year: 'numeric',
     month: 'long',
@@ -50,7 +50,7 @@ function formatDate(date) {
         <div class="text-black dark:text-zinc-300    pt-3 pb-2">
           <div class="flex items-center">
             <LogoDate />
-            {{ formatDate(date) }}
+            {{ formatDate({ date }) }}
           </div>
           <div class="flex items-center gap-1 flex-wrap">
             <LogoTag />
