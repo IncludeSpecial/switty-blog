@@ -1,9 +1,7 @@
 import { navbarData, seoData } from './data'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
-export default defineNuxtConfig(
-
-  {
+export default defineNuxtConfig({
     app: {
       head: {
         charset: 'utf-16',
@@ -20,6 +18,7 @@ export default defineNuxtConfig(
         mode: 'out-in',
       },
     },
+
     runtimeConfig: {
       redis: { // Default values
         host: '',
@@ -27,9 +26,11 @@ export default defineNuxtConfig(
         /* other redis connector options */
       },
     },
+
     experimental: {
       componentIslands: true,
     },
+
     sitemap: {
       strictNuxtContentPaths: true,
     },
@@ -45,13 +46,16 @@ export default defineNuxtConfig(
     typescript: {
       strict: true,
     },
+
     socialShare: {
       baseUrl: 'https://www.switty.ru', // required!
       // other optional module options
     },
+
     robots: {
       mergeWithRobotsTxtPath: './robots.txt',
     },
+
     nitro: {
       // Production
       storage: {
@@ -95,11 +99,22 @@ export default defineNuxtConfig(
       '@nuxtjs/tailwindcss',
       '@stefanobartoletti/nuxt-social-share',
     ],
+
     content: {
       highlight: {
-        theme: 'dracula',
+        theme: {
+          default: 'github-light',
+          dark: 'dracula',
+          light: 'github-light',
+        },
       },
     },
 
     compatibilityDate: '2024-09-30',
-  })
+
+    devtools: {
+      timeline: {
+        enabled: true
+      }
+    }
+})

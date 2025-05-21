@@ -3,25 +3,16 @@ import { SpeedInsights } from '@vercel/speed-insights/nuxt'
 </script>
 
 <template>
-  <div class="gd-container font-spacegrotesk">
-    <header class="fixed w-full bg-white dark:bg-neutral-950 z-10">
+  <div class="min-h-screen font-spacegrotesk flex flex-col">
       <MainHeader />
-    </header>
-    <main>
-      <div class="p-9" />
+    <main class="flex-grow pt-0">
       <SpeedInsights />
       <slot />
     </main>
-    <footer>
       <MainFooter />
-    </footer>
   </div>
 </template>
 
 <style scoped>
-.gd-container {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  min-height: 100vh;
-}
+/* Удалены неиспользуемые стили */
 </style>

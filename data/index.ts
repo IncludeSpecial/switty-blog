@@ -94,7 +94,7 @@ export const blogsPage = {
 export const categoryPage = {
   title: 'Категории',
   description:
-    'Эта категория создается на основе всех тегов, упомянутых в различных записях блога, для вашего удобства и быстрого поиска интересующих тем.',
+    'Эти категория создается на основе всех тегов, упомянутых в различных записях блога, для вашего удобства и быстрого поиска интересующих тем.',
 }
 
 export const seoData = {
@@ -103,7 +103,7 @@ export const seoData = {
   twitterDescription:
     'Сайт моего блога, где я программирую на Nuxt, Vue и т.д., а также демонстрирую свой блог, ресурсы и т.д., чтобы делиться знаниями и вдохновлять других.',
   image: 'https://res.cloudinary.com/dmecmyphj/image/upload/v1673548905/nuxt-blog/cover_ntgs6u.webp',
-  mySite: 'https://switty.ru/',
+  mySite: 'https://switty.ru',
   twitterHandle: '@Switty',
   mailAddress: 'IncludeSpecial@gmail.com',
 }

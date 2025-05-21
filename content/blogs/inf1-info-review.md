@@ -5,7 +5,7 @@ description: "Планета Информатики — образователь
 image: /blogs-img/blog10/planeta-informatiki.jpg
 alt: "Планета Информатики - образовательный ресурс по информатике"
 ogImage: /blogs-img/blog10/planeta-informatiki.jpg
-tags: [ 'информатика', 'образование','алгоритмы', 'программирование', ]
+tags: [ 'computer science', 'education', 'algorithms', 'programming', ]
 postId: "planeta-informatiki-overview"
 published: true
 ---
