@@ -1,21 +1,24 @@
-// remember to fix this issue wint the tailwind/nuxt
-// https://github.com/tailwindlabs/tailwindcss-intellisense/issues/663#issuecomment-1316788128
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'class',
   content: [
-    // ...
-    './content/**/*.md',
+    './components/**/*.{vue,js,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './app.vue',
+    './error.vue',
   ],
   theme: {
     extend: {
+      colors: {
+        ink: '#141311',
+        cream: '#f3efe7',
+        accent: '#e8a35a',
+      },
       fontFamily: {
-        spacegrotesk: ['Space Grotesk', 'sans-serif'],
+        sans: ['Manrope', 'system-ui', 'sans-serif'],
+        display: ['Unbounded', 'Manrope', 'sans-serif'],
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/forms'),
-  ],
+  plugins: [],
 }
