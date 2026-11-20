@@ -1,42 +1,28 @@
 {
   "version": "1.4.0",
   "private": true,
+  "engines": {
+    "node": "26.x"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@fontsource/manrope": "^5.2.6",
+    "@fontsource/unbounded": "^5.2.6",
     "@vercel/analytics": "^1.4.1",
-    "@vercel/speed-insights": "^1.1.0",
-    "@vueuse/motion": "^2.2.6",
-    "clsx": "^2.1.1"
+    "@vercel/speed-insights": "^1.1.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.42.1",
-    "@formkit/auto-animate": "^0.8.2",
-    "@nuxt/content": "^2.13.4",
     "@nuxt/image": "^1.9.0",
-    "@nuxtjs/color-mode": "^3.5.2",
-    "@nuxtjs/fontaine": "^0.4.4",
     "@nuxtjs/robots": "^4.1.11",
     "@nuxtjs/sitemap": "^6.1.5",
     "@nuxtjs/tailwindcss": "^6.13.1",
-    "@stefanobartoletti/nuxt-social-share": "^0.6.1",
-    "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/typography": "^0.5.16",
-    "@vueuse/core": "^10.9.0",
-    "@vueuse/nuxt": "^10.11.1",
-    "eslint": "^8.57.1",
-    "feed": "^4.2.2",
     "nuxt": "^3.15.3",
-    "nuxt-icon": "^0.6.10",
-    "nuxt-og-image": "^3.1.1",
-    "typescript": "^5.7.3",
-    "vue-content-loader": "^2.0.1"
+    "typescript": "^5.7.3"
   }
 }
